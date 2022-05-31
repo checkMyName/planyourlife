@@ -1,0 +1,127 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.about {
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: get($index, default);
+  }
+
+  &__content {
+    $content-y-padding: 8%;
+
+    padding-top: $content-y-padding;
+    padding-bottom: $content-y-padding;
+
+    &-dashes {
+      & > [class^="col-"]:not(:last-child) {
+        $item-width: 30px;
+        $item-height: 2px;
+
+        .about__item {
+          position: relative;
+
+          &::after {
+            @include pseudo;
+
+            width: $item-width;
+            height: $item-height;
+            top: calc(50% - #{$item-height} / 2);
+            left: calc(100% + ((#{$grid-gutter-width / 2}) - #{$item-width}));
+            background-color: get($colors, hawkesblue);
+
+            @include media-breakpoint-down(lg) {
+              display: none;
+            }
+          }
+        }
+
+        .about__or {
+          position: relative;
+
+          &:after,
+          &:before {
+            @include pseudo;
+
+            width: #{$item-width / 2};
+            height: $item-height;
+            top: calc(50% - #{$item-height});
+            background-color: get($colors, hawkesblue);
+          }
+
+          &::after {
+            left: calc(100% + ((#{$grid-gutter-width / 2}) - #{$item-width / 4}));
+          }
+
+          &::before {
+            right: calc(100% + ((#{$grid-gutter-width / 2}) - #{$item-width / 4}));
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    $img-size: rem(69px);
+
+    position: relative;
+
+    &-img {
+      width: $img-size;
+      height: $img-size;
+      padding: $img-size * 0.3;
+      border-radius: 50%;
+      background-color: get($colors, aliceblue);
+
+      svg {
+        fill: transparent;
+      }
+    }
+
+    &-title {
+      color: get($colors, ultramarineblue);
+      font-weight: 700;
+    }
+
+    &-description {
+      @include font-size(11px);
+
+      font-weight: 600;
+      color: get($colors, logan);
+    }
+  }
+
+  &__or {
+    @include font-size(11px);
+  }
+
+  &__parallax {
+    $item-size: rem(100px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &-element {
+      position: absolute;
+      width: $item-size;
+      height: $item-size;
+
+      svg {
+        fill: get($colors, hawkesblue);
+      }
+    }
+  }
+}

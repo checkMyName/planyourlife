@@ -1,0 +1,12 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.brands {
+  &__item {
+    $item-size: rem(145px);
+
+    height: $item-size * 0.5;
+    width: $item-size;
+  }
+}

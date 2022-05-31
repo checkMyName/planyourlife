@@ -1,0 +1,64 @@
+section#about.about.offset-section.offset-section--start.offset-section--end
+
+  -
+    const aboutItems = [
+      {
+        iconName: 'about-icon-overview',
+        title: 'Overview',
+        description: 'Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.',
+      },
+      {
+        iconName: 'about-icon-files',
+        title: 'Files',
+        description: 'No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.',
+      },
+      {
+        iconName: 'about-icon-meeting-chats',
+        title: 'Meeting chats',
+        description: 'Vim ne tacimates neglegentur. Erat diceret omittam at est.',
+      },
+      {
+        iconName: 'about-icon-save-events',
+        title: 'Save events',
+        description: 'Nisl idque mel ea, nominati voluptatum.',
+      },
+    ]
+
+  .about__wrapper.text-center
+    small.text-uppercase
+      b About us
+    +title({
+      tag: 'h3',
+      type: 'small',
+      content: 'Read about our app',
+      classes: 'py-4',
+    })
+    .about__content
+      .row.g-5.g-lg-1.flex-lg-row.justify-content-around.about__content-dashes
+        each item in aboutItems 
+          .col-md-6.col-lg-3
+            .about__item.h-100.px-5
+              .about__item-img.mx-auto
+                +icon(item.iconName)
+              .about__item-title.py-5 #{item.title}
+              .lh-lg.about__item-description #{item.description}
+    .row.justify-content-center.align-items-center.about__content-dashes
+      .col-auto
+        +button({
+          buttonType: 'button',
+          type: 'default',
+          content: 'Read more',
+          classes: 'py-3 px-4 about__button',
+        })
+      .col-auto
+        p.d-inline-block.my-0.text-uppercase.about__or or
+      .col-auto
+        +button({
+          buttonType: 'button',
+          type: 'danger',
+          content: 'Get started',
+          classes: 'py-3 px-4 about__button',
+        })
+  #js-about-parallax.d-none.d-md-block.w-100.h-100.about__parallax
+    #js-about-parallax-element.about__parallax-element
+      +icon('cloud')

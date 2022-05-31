@@ -1,0 +1,60 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.testimonial {
+  padding-right: $grid-gutter-width / 2;
+  background: linear-gradient(to bottom, get($colors, solitude), get($colors, ghostwhite));
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__slider {
+    $slider-padding-b: rem(60px);
+
+    padding-bottom: $slider-padding-b;
+    margin-right: -#{$grid-gutter-width / 2};
+
+    .swiper {
+      $slider-width: rem(400px);
+
+      &-slide {
+        @include transition;
+
+        width: $slider-width;
+
+        &:not(.swiper-slide-active) {
+          opacity: 45%;
+        }
+      }
+
+      &-pagination {
+        left: $slider-padding-b * 2;
+        text-align: left;
+      }
+    }
+  }
+
+  &__item {
+    $profile-img-size: rem(65px);
+    $item-content-height: rem(45px);
+    $item-content-width: rem(69px);
+
+    &-content {
+      position: relative;
+      padding: $item-content-height $item-content-width;
+      background-color: get($colors, white);
+    }
+
+    &-description {
+      @include font-size(14px);
+    }
+
+    &-image {
+      width: $profile-img-size;
+      height: $profile-img-size;
+      margin-top: -#{$profile-img-size / 2};
+    }
+  }
+}

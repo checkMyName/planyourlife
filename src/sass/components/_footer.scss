@@ -1,0 +1,32 @@
+@import "../utilites/variables";
+
+.footer {
+  $y-padding: 6%;
+
+  padding-top: $y-padding;
+  padding-bottom: $y-padding;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: $y-padding * .5;
+    padding-bottom: $y-padding * .5;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: $y-padding * .3;
+    padding-bottom: $y-padding * .3;
+  }
+
+  &__copyright {
+    @include font-size(0.8em);
+
+    color: get($colors, casper);
+  }
+
+  .header {
+    position: static;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

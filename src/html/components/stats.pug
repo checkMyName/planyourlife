@@ -1,0 +1,24 @@
+section.stats
+  .w-100.d-flex
+    .w-50.stats__container.stats__container--left
+      .stats__content.d-flex.flex-column.text-end
+        .align-self-end.stats__content-img
+          +icon('stats-icon-productivity')
+        +title({
+          tag: 'h2',
+          type: 'big',
+          content: '89%',
+          classes: 'pt-4 pb-2 stats__content-numbers',
+        })
+        p.stats__description Customers who have increased their productivity
+    .w-50.stats__container.stats__container--right
+      .stats__content.d-flex.flex-column
+        .align-self-start.stats__content-img
+          +icon('stats-icon-users')
+        +title({
+          tag: 'h2',
+          type: 'big',
+          content: '3123',
+          classes: 'pt-4 pb-2 stats__content-numbers',
+        })
+        p.stats__content-description Users who have used our application

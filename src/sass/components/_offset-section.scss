@@ -1,0 +1,70 @@
+@import "../utilites/variables";
+
+.svg-hightlight {
+	.svg-icon {
+		@include transition;
+
+		fill: get($colors, frenchgray);
+		fill-rule: evenodd;
+	}
+	&:hover {
+		.svg-icon {
+			fill: get($colors, blueberry);
+		}
+	}
+}
+
+.offset-section {
+	$x-offset: 20%;
+	$y-offset: 8%;
+
+	padding-top: $y-offset;
+	padding-bottom: $y-offset;
+
+	&--start {
+		padding-left: $x-offset;
+	}
+
+	&--end {
+		padding-right: $x-offset;
+	}
+
+	@include media-breakpoint-down(xl) {
+		padding-top: $y-offset * .75;
+		padding-bottom: $y-offset * .75;
+
+		&--start {
+			padding-left: $x-offset * 0.60;
+		}
+
+		&--end {
+			padding-right: $x-offset * 0.60;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		padding-top: $y-offset * .75;
+		padding-bottom: $y-offset * .75;
+
+		&--start {
+			padding-left: $x-offset * 0.30;
+		}
+
+		&--end {
+			padding-right: $x-offset * 0.30;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding-top: $y-offset * .75;
+		padding-bottom: $y-offset * .75;
+
+		&--start {
+			padding-left: $x-offset * 0.1;
+		}
+
+		&--end {
+			padding-right: $x-offset * 0.1;
+		}
+	}
+}

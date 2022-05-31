@@ -1,0 +1,30 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.newsletter {
+  background-color: get($colors, blackwhite);
+  .form__group {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    @include font-size(1.2em);
+
+    font-weight: 700;
+  }
+
+  &__description {
+    @include font-size(0.95em);
+  }
+
+  &__input {
+    border: none;
+    background-color: get($colors, athensgray);
+  }
+  &__button {
+    padding: rem(18px) rem(75px);
+    color: get($colors, white);
+    background-color: get($colors, sttropaz);
+  }
+}

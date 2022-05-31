@@ -1,0 +1,35 @@
+section.platforms.offset-section.offset-section--start.offset-section--end
+  .row.justify-content-around.align-items-center
+    .col-12.col-lg-4
+      small.text-uppercase
+        b Desktop and mobile app
+      +title({
+        tag: 'h3',
+        type: 'medium',
+        content: '<strong>Plan</strong> and <strong>manage</strong>',
+        classes: 'py-4'
+      })
+      p.mb-5.lh-lg.platforms__description
+        | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.
+      .row.pb-4.pb-lg-0.gx-0.justify-content-center.justify-content-lg-start
+        .col-auto
+          +button({
+            buttonType: 'button',
+            type: 'default',
+            content: 'View video',
+            classes: 'py-3 px-4 h-100'
+          })
+        .col-auto
+          +button({
+            buttonType: 'button',
+            type: 'outlined',
+            content: 'See features',
+            classes: 'py-3 px-4 h-100'
+          })
+    .col-auto
+      +lazyImage({
+        imageSrc: '../img/platforms-image.png',
+        type: 'img',
+        classes: 'platforms__image',
+        imageClasses: 'h-100 w-auto w-100',
+      })

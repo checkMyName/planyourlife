@@ -1,0 +1,8 @@
+mixin icon(name, className, width, height)
+
+	svg(
+		class=['svg-icon', className]
+		width=width || null
+		height=height || null
+	)
+		use(xlink:href='img/sprite.svg#' + name)

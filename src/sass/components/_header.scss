@@ -1,0 +1,103 @@
+@import "../utilites/variables";
+
+.header {
+  $logo-size: rem(26px);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: get($colors, white);
+  z-index: 20;
+
+  &__logo {
+    width: $logo-size;
+    height: $logo-size;
+    border-radius: 50%;
+    background-color: get($colors, secondary);
+  }
+
+  &__nav {
+    &-link {
+      $link-padding: rem(10px);
+
+      @include transition;
+      @include font-size(12px);
+
+      padding: $link-padding;
+      font-weight: 700;
+      color: get($colors, lynch);
+
+      &:hover {
+        color: get($colors, secondary);
+      }
+    }
+  }
+
+  &__social {
+    $soc-icon-size: rem(40px);
+
+    &-link {
+      display: block;
+      width: $soc-icon-size;
+      height: $soc-icon-size;
+      padding: $soc-icon-size * 0.25;
+    }
+  }
+
+  &__menu-burger {
+    $burger-size: (30px);
+    $span-height: 3px;
+
+    position: relative;
+    width: $burger-size;
+    height: $burger-size;
+    border-radius: 50%;
+    z-index: get($index, sm);
+
+    span {
+      @include transition;
+
+      height: $span-height;
+      width: 100%;
+      background-color: get($colors, primary);
+      display: block;
+      margin: 0 auto;
+    }
+
+    &::after,
+    &::before {
+      @include pseudo;
+      @include transition;
+
+      height: $span-height;
+      width: 100%;
+      background-color: get($colors, primary);
+      left: 0;
+    }
+
+    &::after {
+      bottom: calc((#{$burger-size} / 4) - (#{$span-height} / 2));
+    }
+
+    &::before {
+      top: calc((#{$burger-size} / 4) - (#{$span-height} / 2));
+    }
+  }
+
+  &__menu-burger.is-active {
+    span {
+      width: 0;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
+}

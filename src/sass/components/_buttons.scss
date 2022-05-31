@@ -1,0 +1,37 @@
+@import "../utilites/variables";
+
+.button {
+	@include transition;
+	@include font-size(13px);
+
+	font-weight: 700;
+
+	&--default {
+		background-color: get($colors, hawkesblue);
+		color: get($colors, crayolablue);
+		&:hover {
+			background-color: get($colors, crayolablue);
+			color: get($colors, white);
+		}
+	}
+
+	&--danger {
+		background-color: get($colors, cosmos);
+		color: get($colors, danger);
+		&:hover {
+			background-color: get($colors, danger);
+			color: get($colors, white);
+		}
+	}
+
+	&--outlined {
+		font-weight: 500;
+		border: 1px solid get($colors, light);
+		color: get($colors, light);
+		&:hover {
+			border-color: get($colors, light);
+			background-color: get($colors, light);
+			color: get($colors, white);
+		}
+	}
+}

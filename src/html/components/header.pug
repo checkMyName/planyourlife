@@ -1,0 +1,62 @@
+header(class=['header', 'js-header']).py-3
+
+	-
+		navItems = [
+			{
+				name: 'Home',
+				href: '#'
+			},
+			{
+				name: 'Blog',
+				href: '#'
+			},
+			{
+				name: 'Features',
+				href: '#'
+			},
+			{
+				name: 'Pricing',
+				href: '#'
+			},
+			{
+				name: 'Documentation',
+				href: '#'
+			}
+		]
+
+	.container
+		.row.align-items-center
+			.col-auto.me-lg-2.me-xl-5
+				a(class=["d-block", "header__logo"] href='#')
+			.col-auto
+				nav(class=["d-none d-lg-block", "header__nav"])
+					.row.gx-lg-3.gx-xl-4
+						each item in navItems
+							.col-auto
+								a(class="header__nav-link" href=item.href) #{item.name}
+			.col-auto.ms-auto
+				.header__social.d-none.d-lg-block
+					.row.gx-lg-3.gx-xl-4
+						.col-auto
+							a(class="svg-hightlight header__social-link" href='#')
+								+icon('header-icon-facebook')
+						.col-auto
+							a(class="svg-hightlight header__social-link" href='#')
+								+icon('header-icon-telegram')
+						.col-auto
+							a(class="svg-hightlight header__social-link" href='#')
+								+icon('header-icon-twitter')
+						.col-auto
+							a(class="svg-hightlight header__social-link" href='#')
+								+icon('header-icon-medium')
+			.col-auto
+				+button({
+					buttonType: 'button',
+					type: 'default',
+					content: 'Get started',
+					classes: 'py-3 px-4 d-none d-lg-block'
+				})
+			.col-auto.d-block.d-lg-none
+				button(class=["header__menu-burger", "js-burger-button"] type='button' data-bs-toggle='offcanvas' data-bs-target='#js-site-menu' aria-controls='menu')
+					span
+

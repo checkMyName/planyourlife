@@ -1,0 +1,30 @@
+section#getstarted.getstarted.offset-section
+  .getstarted__wrapper.text-center
+    small.text-uppercase
+      b Plan your life
+    +title({
+      tag: 'h3',
+      type: 'medium',
+      content: 'Get <strong>started</strong> now', 
+      classes: 'py-4',
+    })
+    p.mx-auto.lh-lg.getstarted__description
+      | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+    .row.gx-0.justify-content-center.pt-5
+      .col-auto
+        +button({
+          buttonType: 'button',
+          type: 'default',
+          content: 'View video',
+          classes: 'py-3 px-4 h-100 getstarted__button-default',
+        })
+      .col-auto
+        +button({
+          buttonType: 'button',
+          type: 'outlined',
+          content: 'Read documentation',
+          classes: 'py-3 px-4 h-100 getstarted__button-outlined',
+        })
+  #js-getstarted-parallax.d-none.d-md-block.w-100.h-100.getstarted__parallax
+    #js-getstarted-parallax-element.getstarted__parallax-element
+      +icon('cloud')

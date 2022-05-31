@@ -1,0 +1,58 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+$container-padding: rem(30px);
+
+.stats {
+  &__container {
+    padding: $container-padding * 2 $container-padding * 3;
+
+    &--left {
+      color: get($colors, white);
+      background-color: get($colors, secondary);
+    }
+
+    &--right {
+      color: get($colors, secondary);
+      background-color: get($colors, solitude);
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: $container-padding * 1.5 $container-padding * 2;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: $container-padding * .9 $container-padding * 1;
+    }
+  }
+
+  &__content {
+    $img-size: rem(65px);
+
+    &-img {
+      display: block;
+      width: $img-size;
+      height: $img-size;
+
+      svg {
+        fill: transparent;
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: $img-size * .75;
+        height: $img-size * .75;
+      }
+    }
+
+    &-numbers {
+      font-weight: 400;
+    }
+
+    &-description {
+      @include font-size(1.2em);
+
+      font-weight: 500;
+    }
+  }
+}

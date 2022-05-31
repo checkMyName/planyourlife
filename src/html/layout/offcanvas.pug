@@ -1,0 +1,16 @@
+block offcanvasContentVariables
+
+div(
+	class=[
+		'offcanvas',
+		offcanvasClasses || null
+	]
+	id=offcanvasId
+	aria-hidden='true'
+	data-bs-backdrop=(offcanvasBackdrop ? 'true' : null)
+)
+	.offcanvas-header
+		button(class="ms-auto" type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+			+icon('close', '', '20px', '20px')
+	.offcanvas-body
+		block offcanvasContent

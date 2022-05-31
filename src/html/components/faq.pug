@@ -1,0 +1,59 @@
+section.faq.offset-section.offset-section--start.offset-section--end
+  
+  -
+    const faqItems = [
+      {
+        id: 'question-one',
+        question: 'Reque insolens in vel?',
+        answer: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
+      },
+      {
+        id: 'question-two',
+        question: 'Vis rebum error graecis ea, id sit postea accusamus?',
+        answer: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
+      },
+      {
+        id: 'question-three',
+        question: 'Lorem repudiandae ne nec?',
+        answer: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
+      },
+      {
+        id: 'question-four',
+        question: 'Ad dicit numquam vel. Et eos iudico feugait percipitur?',
+        answer: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
+      },
+      {
+        id: 'question-five',
+        question: 'Sea no dico percipitur. Fierent constituam definitiones id eum?',
+        answer: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
+      },
+    ]
+
+  .container
+    .faq__header.text-center
+        small.text-uppercase
+          b Customer help
+        +title({
+          tag: 'h3',
+          type: 'small',
+          content: 'Frequently asked questions',
+          classes: 'py-4',
+        })
+    #faq-collapse-group.faq__content
+      each item in faqItems
+        a(href='#'+item.id class=["py-3 px-5", "faq__content-header faq__content-underline", "js-collapse-button"] data-bs-toggle='collapse' role='button' aria-expanded='false' aria-controls='#'+item.id)
+          .faq__content-icon
+            +icon('arrow-down')
+          p #{item.question}
+        div(id=item.id class=["collapse js-faq-collapse", "faq__content-collapse faq__content-underline"] data-bs-parent='#faq-collapse-group')
+          .row.flex-column.flex-md-row.align-items-center.justify-content-around.mx-5.pt-2.pb-4
+            .col
+              p.me-3.lh-lg #{item.answer}
+            .col-auto
+              +button({
+                buttonType: 'button',
+                type: 'outlined',
+                content: 'Go to documentation',
+                classes: 'py-3 px-5',
+              })
+      

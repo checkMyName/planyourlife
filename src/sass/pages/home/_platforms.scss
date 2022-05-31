@@ -1,0 +1,29 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.platforms {
+  background-color: get($colors, zircon);
+
+  &.offset-section--start {
+    @include media-breakpoint-up(lg) {
+      padding-right: 0;
+    }
+  }
+
+  .row {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+
+  &__image {
+    $image-height: rem(300px);
+
+    @include media-breakpoint-down(xxl) {
+      height: $image-height;
+    }
+  }
+}

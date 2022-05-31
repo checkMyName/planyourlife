@@ -1,0 +1,86 @@
+section#blog.blog
+
+  -
+    const blogItems = [
+      {
+        title: 'How to start planning',
+        description: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+      },
+      {
+        title: 'How to start planning',
+        description: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+      },
+      {
+        title: 'How to start planning',
+        description: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+      },
+    ]
+
+  .container-lg
+    .blog__wrapper.text-center
+      small.text-uppercase
+        b Our resources
+      +title({
+        tag: 'h3',
+        type: 'small',
+        content: 'Start reading our blog',
+        classes: 'py-4',
+      })
+      .blog__slider
+        .swiper.js-blog-slider
+          .swiper-wrapper
+            each item in blogItems
+              .swiper-slide
+                .blog__slider-wrapper.h-100
+                  .row.gy-4.gy-lg-0.flex-column.flex-lg-row
+                    .col
+                      .blog__slider-content
+                        .blog__slider-img.blog__slider-img--yellow
+                          +lazyImage({
+                            imageSrc: '../img/blog-slider-image-1.png',
+                            type: 'img',
+                            classes: 'w-100 h-100',
+                            imageClasses: 'w-100 h-100',
+                          })
+                          button.blog__slider-zoom
+                            +icon('blog-slider-icon-zoom-button')
+                        .blog__slider-img.blog__slider-img--red
+                          +lazyImage({
+                            imageSrc: '../img/blog-slider-image-2.png',
+                            type: 'img',
+                            classes: 'w-100 h-100',
+                            imageClasses: 'w-100 h-100',
+                          })
+                          button.blog__slider-zoom
+                            +icon('blog-slider-icon-zoom-button')
+                        .blog__slider-img.blog__slider-img--blue
+                          +lazyImage({
+                            imageSrc: '../img/blog-slider-image-3.png',
+                            type: 'img',
+                            classes: 'w-100 h-100',
+                            imageClasses: 'w-100 h-100',
+                          })
+                          button.blog__slider-zoom
+                            +icon('blog-slider-icon-zoom-button')
+                    .col
+                      .ms-lg-1.ms-xl-4.h-100.text-start.d-flex.flex-column.justify-content-between
+                        +title({
+                          tag: 'h3',
+                          type: 'medium',
+                          content: item.title,
+                          classes: 'blog__slider-title',
+                        })
+                        p.blog__slider-description.lh-lg #{item.description}
+                        .d-flex.align-items-center
+                          +button({
+                            buttonType: 'button',
+                            type: 'default',
+                            content: 'Read now',
+                            classes: 'py-3 px-4 blog__slider-button',
+                          })
+                          a(class=["ms-5", "blog__slider-link"] href='#') Add to your bookmarks
+        button.blog__slider-prev.d-none.d-lg-block.js-blog-slider-prev
+          +icon('blog-slider-button-prev')
+        button.blog__slider-next.d-none.d-lg-block.js-blog-slider-next
+          +icon('blog-slider-button-next')
+        .swiper-pagination.js-blog-slider-pagination

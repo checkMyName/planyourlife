@@ -1,0 +1,63 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.getstarted {
+  position: relative;
+  // background: linear-gradient(230deg, get($colors, cornflowerblue) 12%, get($colors, blueberry) 75%);
+  background: linear-gradient(229.32deg, #6888ff 15%, #5e80ff 75%);
+  color: get($colors, white);
+
+  &__wrapper {
+    position: relative;
+    z-index: get($index, default);
+  }
+
+  &__description {
+
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 75%;
+    }
+  }
+
+  &__button {
+    &-default {
+      color: get($colors, black);
+      background-color: get($colors, white);
+      &:hover {
+        background-color: get($colors, black);
+      }
+    }
+    &-outlined {
+      color: get($colors, white);
+      border-color: get($colors, white);
+      &:hover {
+        color: get($colors, black);
+        background-color: get($colors, white);
+      }
+    }
+  }
+
+  &__parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &-element {
+      $element-size: rem(100px);
+
+      position: absolute;
+      width: $element-size;
+      height: $element-size;
+
+      svg {
+        fill: get($colors, primary);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+mixin breadcrumbs(items, classes)
+
+  ul(class=['breadcrumbs', classes])
+    each item, index in items
+      li(class=['breadcrumbs__item'])
+        if index !== items.length - 1
+          a(href=item.href || '#', class=['breadcrumbs-link'])= item.name
+        else
+          span(class=['breadcrumbs__current'])= item.name

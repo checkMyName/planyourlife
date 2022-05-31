@@ -1,0 +1,94 @@
+#intro__chart.w-100.h-100.intro__chart
+
+  template#intro-tooltip
+    +icon('intro-tooltip-icon', '', '30px', '30px')
+
+  -
+    const charItems = [
+      {
+        content: 'intro-tooltip-icon',
+        point: 'tooltip-point-1'
+      },
+      {
+        content: 'intro-tooltip-icon',
+        point: 'tooltip-point-2'
+      },
+      {
+        content: 'intro-tooltip-icon',
+        point: 'tooltip-point-3'
+      },
+      {
+        content: 'intro-tooltip-icon',
+        point: 'tooltip-point-4'
+      },
+    ]
+
+  svg.intro__svg(viewbox='0 0 1440 465' fill='none' xmlns='http://www.w3.org/2000/svg' preserveaspectratio='xMidYMid meet')
+    path.intro__svg-mainline(d='M0 422.51C202.703 422.51 347.472 387.633 480.333 389.758C789.74 394.705 643.639 247.682 960.667 247.682C1305.86 247.682 1223.24 118 1441 118' stroke='#5F82FF' stroke-width='3')
+    path(d='M480.333 389.758C347.472 387.633 202.703 422.51 0 422.51V465H1441V118C1223.24 118 1305.86 247.682 960.667 247.682C643.639 247.682 789.74 394.705 480.333 389.758Z' fill='url(#paint0_linear_6_26)' fill-opacity='0.4')
+
+    g(class=['intro__svg-circle', 'js-tooltip-button'] filter='url(#filter0_d_6_26)' data-hover-tooltip-point='tooltip-point-1')
+      circle(cx='924.5' cy='248.5' r='7.5' fill='white')
+      circle(cx='924.5' cy='248.5' r='6.5' stroke='#5E80FE' stroke-width='2')
+
+    g(class=['intro__svg-circle', 'js-tooltip-button'] filter='url(#filter1_d_6_26)' data-hover-tooltip-point='tooltip-point-2')
+      circle(cx='1332.5' cy='134.5' r='7.5' fill='white')
+      circle(cx='1332.5' cy='134.5' r='6.5' stroke='#5E80FE' stroke-width='2')
+
+    g(class=['intro__svg-circle', 'js-tooltip-button'] filter='url(#filter2_d_6_26)' data-hover-tooltip-point='tooltip-point-3')
+      circle(cx='515.5' cy='390' r='7.5' fill='white')
+      circle(cx='515.5' cy='390' r='6.5' stroke='#5E80FE' stroke-width='2')
+
+    g(class=['intro__svg-circle', 'js-tooltip-button'] filter='url(#filter3_d_6_26)' data-hover-tooltip-point='tooltip-point-4')
+      circle(cx='107.5' cy='419.5' r='7.5' fill='white')
+      circle(cx='107.5' cy='419.5' r='6.5' stroke='#5E80FE' stroke-width='2')
+
+    defs
+      filter#filter0_d_6_26(x='902' y='226' width='45' height='45' filterunits='userSpaceOnUse' color-interpolation-filters='sRGB')
+        feflood(flood-opacity='0' result='BackgroundImageFix')
+        fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+        feoffset
+        fegaussianblur(stddeviation='7.5')
+        fecolormatrix(type='matrix' values='0 0 0 0 0.323144 0 0 0 0 0.512664 0 0 0 0 1 0 0 0 0.25 0')
+        feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_6_26')
+        feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_6_26' result='shape')
+
+      filter#filter1_d_6_26(x='1310' y='112' width='45' height='45' filterunits='userSpaceOnUse' color-interpolation-filters='sRGB')
+        feflood(flood-opacity='0' result='BackgroundImageFix')
+        fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+        feoffset
+        fegaussianblur(stddeviation='7.5')
+        fecolormatrix(type='matrix' values='0 0 0 0 0.323144 0 0 0 0 0.512664 0 0 0 0 1 0 0 0 0.25 0')
+        feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_6_26')
+        feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_6_26' result='shape')
+
+      filter#filter2_d_6_26(x='500' y='378' width='45' height='45' filterunits='userSpaceOnUse' color-interpolation-filters='sRGB')
+        feflood(flood-opacity='0' result='BackgroundImageFix')
+        fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+        feoffset
+        fegaussianblur(stddeviation='7.5')
+        fecolormatrix(type='matrix' values='0 0 0 0 0.323144 0 0 0 0 0.512664 0 0 0 0 1 0 0 0 0.25 0')
+        feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_6_26')
+        feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_6_26' result='shape')
+
+      filter#filter3_d_6_26(x='85' y='397' width='45' height='45' filterunits='userSpaceOnUse' color-interpolation-filters='sRGB')
+        feflood(flood-opacity='0' result='BackgroundImageFix')
+        fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+        feoffset
+        fegaussianblur(stddeviation='7.5')
+        fecolormatrix(type='matrix' values='0 0 0 0 0.323144 0 0 0 0 0.512664 0 0 0 0 1 0 0 0 0.25 0')
+        feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_6_26')
+        feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_6_26' result='shape')
+
+      lineargradient#paint0_linear_6_26(x1='278.466' y1='465.443' x2='278.466' y2='10.0051' gradientunits='userSpaceOnUse')
+        stop(stop-color='#4B71FF' stop-opacity='0')
+        stop(offset='1' stop-color='#6B89F8')
+
+  //- .h-100.w-100.intro__chart-content 
+  //-   button(class=['intro__chart-tooltip', 'js-tooltip-button'] type='button')
+  //-     +icon('intro-tooltip-icon')
+
+  //- ul.h-100.w-100.intro__chart-content 
+  //-   each item in charItems
+  //-     li(class='intro__chart-tooltip' data-hover-tooltip-content=item.point)
+  //-       +icon(item.content)

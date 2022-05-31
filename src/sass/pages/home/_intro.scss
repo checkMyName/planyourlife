@@ -1,0 +1,77 @@
+@import "../../utilites/variables";
+@import "../../utilites/mixins";
+@import "node_modules/bootstrap/scss/vendor/rfs";
+
+.intro {
+	position: relative;
+	background: linear-gradient(180deg, get($colors, zircon) 0%, get($colors, aliceblue) 100%);
+
+	.container {
+		padding-top: 12%;
+		padding-bottom: 20%;
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: get($index, md);
+	}
+
+	&__content {
+		z-index: get($index, md);
+	}
+
+	&__content-play {
+		@include transition(box-shadow);
+
+		$play-button-size: rem(50px);
+
+		width: $play-button-size;
+		height: $play-button-size;
+		border-radius: 50%;
+
+		&:hover {
+			box-shadow: 0px 0px 5px 2px rgba(94, 129, 254, .1);
+		}
+	}
+
+	&__content-description {
+		width: 50%;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+	}
+
+	&__parallax {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+
+		&-element {
+			$element-size: rem(100px);
+
+			position: absolute;
+			width: $element-size;
+			height: $element-size;
+			svg {
+				fill: get($colors, get($colors, white));
+			}
+		}
+	}
+
+	&__svg {
+		position: absolute;
+		display: block;
+		fill: initial;
+		bottom: 0;
+		left: 0;
+		pointer-events: initial;
+		z-index: get($index, sm);
+
+		&-mainline,
+		&-circle {
+			fill: transparent;
+		}
+	}
+}

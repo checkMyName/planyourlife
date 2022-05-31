@@ -1,0 +1,7 @@
+@import 'mixins';
+
+@include font-face('Quicksand', '../fonts/Quicksand-Light', 300);
+@include font-face('Quicksand', '../fonts/Quicksand-Regular', 400);
+@include font-face('Quicksand', '../fonts/Quicksand-Medium', 500);
+@include font-face('Quicksand', '../fonts/Quicksand-SemiBold', 600);
+@include font-face('Quicksand', '../fonts/Quicksand-Bold', 700);

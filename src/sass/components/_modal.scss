@@ -1,0 +1,35 @@
+@import '../utilites/variables';
+
+[data-bs-toggle='modal'] {
+	cursor: pointer;
+
+	@include interaction('mouse') {
+		&:hover {
+			color: get($colors, pink)
+		}
+	}
+}
+.modal {
+	user-select: none;
+
+	&-content {
+		padding: $spacer * 2 $spacer * 3 $spacer * 3 $spacer * 3;
+	}
+	&-body {
+		padding: $spacer * 3 0 0 0;
+		overflow-x: hidden;
+	}
+	&-close {
+		@include transition(color);
+
+		svg {
+			width: $spacer * 2;
+			height: $spacer * 2;
+		}
+		@include interaction('mouse') {
+			&:hover {
+				color: get($colors, pink)
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+extends ../layout/offcanvas
+
+block offcanvasContentVariables
+	- offcanvasId = 'js-site-menu'
+	- offcanvasClasses = 'offcanvas-start'
+	- offcanvasBackdrop = true
+
+block offcanvasContent
+
+	nav.menu__nav.row.gy-5.text-center
+		each item, index in navItems
+			.col-12
+				+button({
+					link: {
+						href: item.href || '#'
+					},
+					content: item.name,
+					classes: `w-100 px-4 py-2 menu__nav-link`
+				})

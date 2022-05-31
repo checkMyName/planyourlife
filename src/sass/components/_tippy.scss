@@ -1,0 +1,25 @@
+@import "../utilites/variables";
+
+$tooltip-padding: rem(10px);
+
+.tippy-content {
+  padding: $tooltip-padding $tooltip-padding * 1.5;
+  // background-color: get($colors, white);
+}
+
+.tippy-box[data-theme~="white"] {
+  background-color: get($colors, white);
+  color: get($colors, black);
+
+  &[data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: get($colors, white);
+  }
+
+  .tippy-content {
+    .svg-icon {
+      svg {
+        fill: get($colors, blueberry);
+      }
+    }
+  }
+}

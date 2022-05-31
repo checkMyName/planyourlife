@@ -1,0 +1,33 @@
+@import 'base/root';
+@import 'base/reboot';
+
+@import 'components/typography';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/form/group';
+@import 'components/form/field';
+@import 'components/form/radio-and-checkbox';
+@import 'components/form/validation';
+@import 'components/lazy';
+@import 'components/modal';
+@import 'components/buttons';
+@import 'components/toast';
+@import 'components/dropdown';
+@import 'components/breadcrumbs';
+@import 'components/offset-section';
+@import 'components/menu';
+@import 'components/tippy';
+
+@import 'pages/home/intro';
+@import 'pages/home/brands';
+@import 'pages/home/platforms';
+@import 'pages/home/about';
+@import 'pages/home/stats';
+@import 'pages/home/blog';
+@import 'pages/home/testimonial';
+@import 'pages/home/faq';
+@import 'pages/home/getstarted';
+@import 'pages/home/newsletter';
+
+
+

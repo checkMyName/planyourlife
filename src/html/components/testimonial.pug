@@ -1,0 +1,69 @@
+section#testimonial.testimonial.offset-section.offset-section--start
+
+  -
+    const testimonialItems = [
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+      {
+        quote: "Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.",
+        profileUrl: '../img/testimonial-img-user-profile.png'
+      },
+    ]
+
+  .row.gy-5.gy-lg-0.flex-column.flex-lg-row
+    .col-auto.col-lg-4
+      small.mb-3.text-uppercase.text-start
+        b Testimonials
+      +title({
+        tag: 'h3',
+        type: 'medium',
+        content: "Customer's quotes",
+        classes: 'pt-5 pb-3', 
+      })
+      p.lh-md.testimonial__description
+        | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+    .col-auto.col-lg-8
+      .swiper.testimonial__slider.js-testimonial-slider
+        .swiper-wrapper
+          each item in testimonialItems
+            .swiper-slide
+              .testimonial__item
+                .testimonial__item-content
+                  .lh-lg.testimonial__item-description #{item.quote}
+                +lazyImage({
+                  imageSrc: item.profileUrl,
+                  type: 'img',
+                  classes: 'mx-auto testimonial__item-image',
+                  imageClasses: 'w-100',
+                })
+        .swiper-pagination.js-testimonial-slider-pagination

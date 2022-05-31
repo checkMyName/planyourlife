@@ -1,0 +1,22 @@
+section#intro.intro
+  .container
+    .row.justify-content-center
+      .col-auto
+        .intro__wrapper.text-center
+          .intro__content.d-flex.flex-column.align-items-center
+            small.text-uppercase
+              b Plan your life
+            +title({
+              tag: 'h1',
+              type: 'big',
+			        content: 'Increase your <strong>productivity</strong>',
+              classes: 'py-4'
+            })
+            p.lh-lg.intro__content-description
+              | Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+            button.mt-3.intro__content-play
+              +icon('intro-play-button')
+  #js-intro-parallax.d-none.d-md-block.w-100.h-100.intro__parallax
+    #js-intro-parallax-element.intro__parallax-element
+      +icon('cloud')
+  include ./chart

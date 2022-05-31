@@ -1,0 +1,20 @@
+block modalVariables
+
+div(
+	class=['modal js-modal fade', modalClasses || null]
+	id=modalId
+	aria-hidden='true'
+)
+	div(class=['modal-dialog', 'modal-dialog-centered', 'modal-dialog-scrollable'])
+		div(class='modal-content')
+			button(
+				class=['modal-close', 'ms-auto d-flex align-items-center']
+				type='button'
+				data-bs-dismiss='modal'
+				aria-label='Закрыть'
+			)
+				span.me-3 Закрыть
+				+icon('close')
+
+			div(class='modal-body')
+				block modalContent
